@@ -15,8 +15,6 @@ jest.mock("../data/frontend-assignment.json", () => [
 describe("Fund Component", () => {
   test("renders table and pagination correctly", () => {
     render(<Fund />);
-
-    // Check if the Fund heading is rendered
     expect(screen.getByText(/Percentage funded/i)).toBeInTheDocument();
 
     // Check if table is rendered with the correct number of rows (5 rows)
@@ -47,7 +45,7 @@ describe("Fund Component", () => {
     render(<Fund />);
     const initialTableRows = screen.getAllByRole("row");
     expect(initialTableRows.length).toBe(6);
-    const nextButton = screen.getByText(/>/); // Find next button
+    const nextButton = screen.getByText(/>/);
     fireEvent.click(nextButton);
 
     const newTableRows = screen.getAllByRole("row");
