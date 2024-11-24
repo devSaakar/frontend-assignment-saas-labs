@@ -2,6 +2,7 @@ import React, { useMemo, useState } from "react";
 import data from "../../data/frontend-assignment.json";
 import Table from "../common/Table";
 import Pagination from "../common/Pagination";
+import "./fund.css";
 
 let PageSize = 5;
 
@@ -13,9 +14,9 @@ const Fund = () => {
     const lastPageIndex = firstPageIndex + PageSize;
     return data.slice(firstPageIndex, lastPageIndex);
   }, [currentPage]);
-  
+
   return (
-    <div>
+    <div className="Fund_Wrapper">
       <Table data={currentTableData} />
       <Pagination
         className="pagination-bar"

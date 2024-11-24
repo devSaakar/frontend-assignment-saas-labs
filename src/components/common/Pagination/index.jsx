@@ -39,13 +39,14 @@ const Pagination = (props) => {
   return (
     <ul
       className={`pagination-container ${className ? className : ""}`}
+      role="navigation"
       aria-label="Pagination Navigation"
     >
       <li
         className={`pagination-item ${currentPage === 1 ? "disabled" : ""}`}
         onClick={onPrevious}
       >
-        <div className="arrow left" />
+        &lt;
       </li>
       {paginationRange.map((pageNumber, index) => {
         if (pageNumber === DOTS) {
@@ -77,7 +78,7 @@ const Pagination = (props) => {
         aria-disabled={currentPage !== lastPage}
         onClick={onNext}
       >
-        <div className="arrow right" />
+        &gt;
       </li>
     </ul>
   );

@@ -3,8 +3,3 @@ p {
   font-family: Lato;
 }
 
-.pagination-bar {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-}

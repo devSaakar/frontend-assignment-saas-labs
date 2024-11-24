@@ -1,0 +1,8 @@
+.Fund_Wrapper {
+  padding: 0 4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: space-between;
+  height: 50vh;
+}
